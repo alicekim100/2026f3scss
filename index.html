@@ -95,10 +95,27 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .modal-actions{padding:0 20px;margin-top:16px;display:flex;gap:10px}
 .modal-close-btn{flex:1;padding:12px;border-radius:8px;border:none;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer}
 .names-view-wrap{max-width:900px;margin:0 auto;padding:16px}
-.names-search-wrap{background:var(--navy);padding:10px 16px 12px;position:sticky;top:0;z-index:99;margin:-16px -16px 16px}
-.names-search-input{width:100%;padding:9px 14px;border:1px solid rgba(250,70,22,.3);border-radius:8px;background:#ffffff14;color:#fff;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none}
-.names-search-input::placeholder{color:#ffffff59}
-.names-search-input:focus{border-color:var(--gold)}
+.names-search-input {
+  width: 100%;
+  padding: 9px 14px;
+  border: 2px solid var(--gold);        /* 1px → 2px, 주황색 고정 */
+  border-radius: 8px;
+  background: #ffffff14;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .88rem;
+  outline: none;
+  appearance: none;                      /* 파란 네모 제거 */
+  -webkit-appearance: none;             /* 사파리 호환 */
+}
+
+.names-search-input::placeholder {
+  color: #fff;                           /* #ffffff59 → #fff (흰색) */
+}
+
+.names-search-input:focus {
+  border-color: var(--gold);
+}
 .name-letter-group{margin-bottom:18px}
 .name-letter-heading{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:4px 0 6px;border-bottom:1px solid var(--cream-dark);margin-bottom:8px}
 .name-entry{padding:10px 0;border-bottom:1px solid var(--cream-dark)}
@@ -130,7 +147,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .speaker-avatar{width:48px;height:48px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;color:var(--gold);flex-shrink:0}
 .speaker-info strong{display:block;font-size:.92rem;color:var(--text-dark);margin-bottom:2px}
 .speaker-info span{font-size:.8rem;color:var(--text-light)}
-.speaker-role{display:inline-block;margin-top:5px;font-size:.68rem;padding:2px 8px;border-radius:10px;font-weight:700}
+.speaker-role{display:inline-block;margin-top:5px;font-size:.68rem;padding:2px 8px;border-radius:10px;font-weight:700;color:#fff}
 /* Welcome / Cover Page */
 .welcome-view{display:none;min-height:100vh;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;text-align:center}
 .welcome-view.active{display:flex}
@@ -229,7 +246,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
   <div class="content-area">
     <div class="names-view-wrap">
       <div class="names-search-wrap">
-        <input class="names-search-input" id="namesSearch" type="text" placeholder="Search presenters…" oninput="renderNames(this.value)">
+        <input class="names-search-input" id="namesSearch" type="text" placeholder="Search Presenters…" oninput="renderNames(this.value)">
       </div>
       <div id="namesListWrap"></div>
     </div>
