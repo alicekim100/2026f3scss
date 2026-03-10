@@ -36,6 +36,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .session-card.type-inequality{border-left-color:#2563eb}
 .session-card.type-environment{border-left-color:#2e7d32}
 .session-card.type-race{border-left-color:#b45309}
+.session-card.type-institution{border-left-color:#0e7490}
 .card-header{display:flex;align-items:flex-start;padding:14px 16px 10px;gap:12px}
 .card-time-block{min-width:64px;text-align:center;padding:6px 8px;background:var(--cream);border-radius:6px;flex-shrink:0}
 .card-time-block .time{font-size:.78rem;font-weight:700;color:var(--navy);line-height:1.3}
@@ -52,23 +53,21 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .badge-inequality{background:#2563eb;color:#fff}
 .badge-environment{background:#2e7d32;color:#fff}
 .badge-race{background:#b45309;color:#fff}
+.badge-institution{background:#0e7490;color:#fff}
 .badge-special{background:var(--navy-light);color:var(--gold-light)}
 .card-location{font-size:.74rem;color:var(--text-light);margin-top:3px;display:flex;align-items:center;gap:4px}
 .card-speakers{font-size:.74rem;color:var(--text-light);margin:4px 0 2px;line-height:1.5}
 .time-separator{display:flex;align-items:center;gap:10px;margin:18px 0 10px;font-size:.76rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em}
 .time-separator:before,.time-separator:after{content:"";flex:1;height:1px;background:var(--cream-dark)}
 .parallel-note{font-size:.7rem;color:var(--text-light);background:var(--cream);border:1px solid var(--cream-dark);border-radius:6px;padding:5px 12px;margin-bottom:10px;text-align:center}
-/* Bottom Nav */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--navy);border-top:1px solid rgba(201,168,76,.25);display:flex;z-index:100}
 .nav-btn{flex:1;padding:12px 8px;border:none;background:transparent;color:#ffffff70;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:500;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
 .nav-btn svg{width:20px;height:20px}
 .nav-btn.active{color:var(--gold)}
 .nav-btn:hover:not(.active){color:#ffffffbf}
 .content-area{padding-bottom:80px}
-/* Views */
 .view{display:none}
 .view.active{display:block}
-/* Modal */
 .modal-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:#0000008c;z-index:200;align-items:flex-end;justify-content:center}
 .modal-overlay.open{display:flex}
 .modal-sheet{background:var(--white);width:100%;max-width:640px;border-radius:18px 18px 0 0;max-height:88vh;overflow-y:auto;padding:0 0 32px;animation:slideUp .28s cubic-bezier(.32,1.2,.4,1) both}
@@ -83,12 +82,12 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .modal-row strong{display:block;color:var(--text-dark);font-weight:600;margin-bottom:1px}
 .modal-presenters{background:var(--cream);border-radius:8px;padding:12px 14px;margin-top:4px}
 .modal-presenters h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);font-weight:700;margin-bottom:8px}
-.modal-presenter-item{font-size:.88rem;color:var(--text-dark);padding:5px 0;border-bottom:1px solid var(--cream-dark);display:flex;align-items:center;gap:8px}
+.modal-presenter-item{font-size:.88rem;color:var(--text-dark);padding:5px 0;border-bottom:1px solid var(--cream-dark);display:flex;align-items:flex-start;gap:8px}
 .modal-presenter-item:last-child{border-bottom:none}
-.modal-presenter-num{font-size:.7rem;font-weight:700;color:var(--gold);min-width:18px}
+.modal-presenter-num{font-size:.7rem;font-weight:700;color:var(--gold);min-width:18px;margin-top:2px}
+.modal-paper-title{font-size:.78rem;color:var(--text-light);font-style:italic;margin-top:2px;line-height:1.4}
 .modal-actions{padding:0 20px;margin-top:16px;display:flex;gap:10px}
 .modal-close-btn{flex:1;padding:12px;border-radius:8px;border:none;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer}
-/* Names view */
 .names-view-wrap{max-width:900px;margin:0 auto;padding:16px}
 .names-search-wrap{background:var(--navy);padding:10px 16px 12px;position:sticky;top:0;z-index:99;margin:-16px -16px 16px}
 .names-search-input{width:100%;padding:9px 14px;border:1px solid rgba(201,168,76,.3);border-radius:8px;background:#ffffff14;color:#fff;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none}
@@ -104,7 +103,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .name-session-time{font-size:.7rem;color:var(--gold);font-weight:700;white-space:nowrap;padding-top:2px}
 .name-session-title{font-size:.8rem;color:var(--text-mid);line-height:1.4}
 .name-session-loc{font-size:.7rem;color:var(--text-light);margin-top:1px}
-/* Info view */
 .info-view-wrap{max-width:900px;margin:0 auto;padding:16px}
 .info-panel{background:var(--white);border-radius:var(--radius);padding:20px;margin-bottom:12px;box-shadow:0 2px 8px #0f1b3514}
 .info-panel h2{font-family:'DM Serif Display',serif;color:var(--navy);font-size:1.2rem;margin-bottom:10px}
@@ -132,7 +130,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-top">
     <div class="header-event-info">
@@ -155,15 +152,14 @@ main{max-width:900px;margin:0 auto;padding:16px}
     <button class="filter-btn" data-filter="inequality">Inequality &amp; Stratification</button>
     <button class="filter-btn" data-filter="environment">Environment &amp; Conservatism</button>
     <button class="filter-btn" data-filter="race">Race &amp; Ethnicity</button>
+    <button class="filter-btn" data-filter="institution">Institution, Networks &amp; Technology</button>
   </div>
 </header>
 
-<!-- SCHEDULE VIEW -->
 <div class="view active" id="scheduleView">
   <main class="content-area" id="scheduleList"></main>
 </div>
 
-<!-- NAMES VIEW -->
 <div class="view" id="namesView">
   <div class="content-area">
     <div class="names-view-wrap">
@@ -175,7 +171,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
   </div>
 </div>
 
-<!-- INFO VIEW -->
 <div class="view" id="infoView">
   <div class="content-area">
     <div class="info-view-wrap">
@@ -235,6 +230,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
             <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Inequality &amp; Stratification</div>
             <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div>Environment &amp; Conservatism</div>
             <div class="legend-item"><div class="legend-dot" style="background:#b45309"></div>Race &amp; Ethnicity</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#0e7490"></div>Institution, Networks &amp; Technology</div>
           </div>
         </div>
       </div>
@@ -243,7 +239,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
   </div>
 </div>
 
-<!-- SESSION DETAIL MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
   <div class="modal-sheet" id="modalSheet">
     <div class="modal-handle"></div>
@@ -258,7 +253,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
   </div>
 </div>
 
-<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-btn active" id="navSchedule" onclick="showView('schedule')">
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -275,7 +269,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 </nav>
 
 <script>
-// ─── DATA ───────────────────────────────────────────────────────────────────
 const SESSIONS = [
   {
     id: 's0',
@@ -298,11 +291,18 @@ const SESSIONS = [
     badgeLabel: 'Crime & Deviance I',
     cardClass: 'type-crime',
     title: 'Crime & Deviance I',
-    timeStart: '10:15',
-    timeEnd: '11:45',
+    timeStart: '9:30',
+    timeEnd: '10:50',
     ampm: 'AM',
-    room: 'Room 2365, Reitz Union',
-    speakers: ['Tierney', 'Vallow', 'Lee', 'Malewschik', 'Colon'],
+    room: 'Room 2315, Reitz Union',
+    speakers: ['Carla Tierney', 'Paxton Vallow', 'Jihyeong Lee', 'Tayana Malewschik', 'Leyla Colon'],
+    papers: [
+      {name: 'Carla Tierney', title: 'Labeling Theory Revitalization: Revisiting a Foundational Criminological Framework'},
+      {name: 'Paxton Vallow', title: "A Mixed Method Analysis of Kojaque's Town's Dead"},
+      {name: 'Jihyeong Lee', title: 'The Circle of Violence: The Effect of Child Abuse Experience on Dating Violence Offending'},
+      {name: 'Tayana Malewschik', title: 'The Impact of Negative Life-Events and Emotional Strain on Vaping Among Florida Adolescents'},
+      {name: 'Leyla Colon', title: "Cardi B's Album Invasion of Privacy: Content Analysis"}
+    ],
     description: 'Paper presentations on crime, deviance, and criminal justice topics. Session I.'
   },
   {
@@ -312,11 +312,18 @@ const SESSIONS = [
     badgeLabel: 'Gender & Sexuality I',
     cardClass: 'type-gender',
     title: 'Gender & Sexuality I',
-    timeStart: '10:15',
-    timeEnd: '11:45',
+    timeStart: '9:30',
+    timeEnd: '10:50',
     ampm: 'AM',
-    room: 'Room 2370, Reitz Union',
-    speakers: ['Blades', 'Emmanuel', 'Dowling', 'Oli', 'Khurana'],
+    room: 'Room 2320, Reitz Union',
+    speakers: ['Kai Blades', 'Ruth Emmanuel', 'Serena Dowling', 'Chidinma Oli', 'Shaun Khurana'],
+    papers: [
+      {name: 'Kai Blades', title: "Freedom in the Binary: The trajectory of women's liberation in revolutionary Grenada"},
+      {name: 'Ruth Emmanuel', title: '"Silence, Survival, and Motherhood: An African Feminist and Critical Discourse Analysis of Sista,"'},
+      {name: 'Serena Dowling', title: 'Women Take Flight: Soviet and American Women challenging Gender Dialogue in WWII'},
+      {name: 'Chidinma Oli', title: 'Respectful Maternity Care and Postpartum Emotional Distress: The Mediating Role of Baby-Friendly Hospital Initiative Practices and Moderation by Support'},
+      {name: 'Shaun Khurana', title: 'How Religious Exemptions to Nondiscrimination Laws Shape Child-Placing Organizations: Evidence from Florida and Texas'}
+    ],
     description: 'Paper presentations on gender, sexuality, and identity. Session I.'
   },
   {
@@ -326,11 +333,17 @@ const SESSIONS = [
     badgeLabel: 'Health & Wellbeing',
     cardClass: 'type-health',
     title: 'Health & Wellbeing',
-    timeStart: '10:15',
-    timeEnd: '11:45',
+    timeStart: '9:30',
+    timeEnd: '10:50',
     ampm: 'AM',
-    room: 'Room 2375, Reitz Union',
-    speakers: ['Deng', 'Kumer Banik', 'Park', 'Green'],
+    room: 'Room 2325, Reitz Union',
+    speakers: ['Amy Deng', 'Jasmine Green', 'Gahyun Park', 'Ashis Kumar Banik'],
+    papers: [
+      {name: 'Amy Deng', title: 'Prevalence of Ketamine Use with Depression and Mental Health Treatment'},
+      {name: 'Jasmine Green', title: 'Strategies To Increase Hospice Volunteers'},
+      {name: 'Gahyun Park', title: 'Latent Profiles of Childhood Maltreatment and Their Associations with Adolescent Anxiety and Depression'},
+      {name: 'Ashis Kumar Banik', title: 'Public Concern About Water Pollution and Policy Urgency as Determinants of Health Risk Perceptions'}
+    ],
     description: 'Paper presentations on health, medicine, and wellbeing in social contexts.'
   },
   {
@@ -340,11 +353,18 @@ const SESSIONS = [
     badgeLabel: 'Inequality & Stratification',
     cardClass: 'type-inequality',
     title: 'Inequality & Stratification',
-    timeStart: '10:15',
-    timeEnd: '11:45',
+    timeStart: '9:30',
+    timeEnd: '10:50',
     ampm: 'AM',
-    room: 'Room 2380, Reitz Union',
-    speakers: ['Santosh', 'Jones', 'Garlitz', 'Li', 'Castillo-Fredes'],
+    room: 'Room 2330, Reitz Union',
+    speakers: ['Prathmesh Santosh Choudhari', 'Freddie Jones', 'Dustin Garlitz', 'Yiyuan Li', 'Rocio Castillo-Fredes'],
+    papers: [
+      {name: 'Prathmesh Santosh Choudhari', title: 'Artificial Intelligence as an Enabler of Cooperative Economies: A Qualitative Policy Analysis from Developing Regions'},
+      {name: 'Freddie Jones', title: "Evaluation Proposal for the Gainesville Housing Authority's Strive 4 Success Program"},
+      {name: 'Dustin Garlitz', title: "The Role of Labor in Durkheim's Classical Social Theory"},
+      {name: 'Yiyuan Li', title: 'Golden-Rule Labor Division and Income Share'},
+      {name: 'Rocio Castillo-Fredes', title: 'The Evolution of Democratic Concepts through Athenian Democracy, the Roman Republic, and Contemporary American Government'}
+    ],
     description: 'Paper presentations on social inequality, class stratification, and mobility.'
   },
   {
@@ -368,11 +388,18 @@ const SESSIONS = [
     badgeLabel: 'Crime & Deviance II',
     cardClass: 'type-crime',
     title: 'Crime & Deviance II',
-    timeStart: '2:15',
-    timeEnd: '3:45',
+    timeStart: '1:00',
+    timeEnd: '2:30',
     ampm: 'PM',
-    room: 'Room 2365, Reitz Union',
-    speakers: ['Wagner', 'Gerner', 'Dickerson', 'Etinenne', 'Ouriques'],
+    room: 'Room 2315, Reitz Union',
+    speakers: ['Valentina Wagner', 'Laisa Ouriques', 'Brooke Gerner', 'Dakota Dickerson', 'Valdriana Etienne'],
+    papers: [
+      {name: 'Valentina Wagner', title: "Situational Legal Precipitators as a Diagnostic Method: Applying Wortley's Framework to Florida's Alligator Management"},
+      {name: 'Laisa Ouriques', title: 'The Effect of Co-witness Contamination and Investigator Bias on Juror Perceptions of Eyewitness Testimonies'},
+      {name: 'Brooke Gerner', title: 'Class Inequality, Social Control, and the Modern Justice System: A Marxist and Durkheimian Analysis'},
+      {name: 'Dakota Dickerson', title: 'The Perfect Score: Observer Error Scoring Post Mortem Interval using Fetal Pig (Sus scrofa) in Western Pennsylvania'},
+      {name: 'Valdriana Etienne', title: 'Closing the Gap in History: Intersectionality and the Erasure of our Fallen Sisters'}
+    ],
     description: 'Paper presentations on crime, deviance, and criminal justice topics. Session II.'
   },
   {
@@ -382,11 +409,18 @@ const SESSIONS = [
     badgeLabel: 'Gender & Sexuality II',
     cardClass: 'type-gender',
     title: 'Gender & Sexuality II',
-    timeStart: '2:15',
-    timeEnd: '3:45',
+    timeStart: '1:00',
+    timeEnd: '2:30',
     ampm: 'PM',
-    room: 'Room 2370, Reitz Union',
-    speakers: ['Rondon-Vasquesz', 'Csatios', 'Shivers', 'Mussa', 'Rincon'],
+    room: 'Room 2320, Reitz Union',
+    speakers: ['Kashmaya Andreas Rincon Casstillo', 'Luis Rondan-Vasquez', 'Adrien Csatlos', 'Reagan Shivers', 'Rabia Mussa'],
+    papers: [
+      {name: 'Kashmaya Andreas Rincon Casstillo', title: 'Understanding the nexus of the environmental harm and victimization of women and girls, Gender Based Violence, Ecological Harm, & Green Victimization in Colombia'},
+      {name: 'Luis Rondan-Vasquez', title: 'How Do Accumulated Social Disparities Drive Precarious Work in Peru?'},
+      {name: 'Adrien Csatlos', title: 'Virtual Victimization: How Online Hate Shapes Fear and Safety Beliefs Among Gender and Sexual Minority Students'},
+      {name: 'Reagan Shivers', title: "A House Divided, A Home Preserved: Gender, Nationalism, and the Preservation of George Washington's Mount Vernon"},
+      {name: 'Rabia Mussa', title: 'Cultural Competence and Cultural Humility in Midwifery Care for Sexual and Gender Minority Parents: An Integrative Literature Review'}
+    ],
     description: 'Paper presentations on gender, sexuality, and identity. Session II.'
   },
   {
@@ -396,11 +430,18 @@ const SESSIONS = [
     badgeLabel: 'Environment & Conservatism',
     cardClass: 'type-environment',
     title: 'Environment & Conservatism',
-    timeStart: '2:15',
-    timeEnd: '3:45',
+    timeStart: '1:00',
+    timeEnd: '2:30',
     ampm: 'PM',
-    room: 'Room 2375, Reitz Union',
-    speakers: ['Godoy', 'McFarlane-Sweeney', 'Villanueva', 'Lewis', 'Lahiri'],
+    room: 'Room 2325, Reitz Union',
+    speakers: ['Camilo Godoy', 'Omar McFarlane-Sweeney', 'Louise Villanueva', 'Kirstin Lewis', 'Annesha Lahiri'],
+    papers: [
+      {name: 'Camilo Godoy', title: 'Contesting Participation: Local Resistance to Salmon Aquaculture Governance in Southern Patagonia'},
+      {name: 'Omar McFarlane-Sweeney', title: 'A Multi-Stakeholder Framework to Enhance Tropical Storm Risk Prediction, Citizen Preparedness, and Climate Adaptation Planning to Improve Community Infrastructure Resilience'},
+      {name: 'Louise Villanueva', title: 'Committee Talk on Climate: Trigrams, Topics, and Sentiments in the 118th U.S. Congress'},
+      {name: 'Kirstin Lewis', title: 'Commoning and Collective Efficacy: A Theoretical Model on the Implications for Degrowth and Crime Reduction'},
+      {name: 'Annesha Lahiri', title: 'What can lead to higher listenership in Podcast?'}
+    ],
     description: 'Paper presentations on environmental sociology, conservation, and ecological issues.'
   },
   {
@@ -410,23 +451,51 @@ const SESSIONS = [
     badgeLabel: 'Race & Ethnicity',
     cardClass: 'type-race',
     title: 'Race & Ethnicity',
-    timeStart: '2:15',
-    timeEnd: '3:45',
+    timeStart: '1:00',
+    timeEnd: '2:30',
     ampm: 'PM',
-    room: 'Room 2380, Reitz Union',
-    speakers: ['Chestnut', 'Yeung', 'Aluru', 'Puthanveetil', 'Meese'],
+    room: 'Room 2330, Reitz Union',
+    speakers: ['Megan Meese', 'Barbara Chestnut-Adamson', 'Asha Puthanveetil', 'John Young IV', 'Bharati Aluru'],
+    papers: [
+      {name: 'Megan Meese', title: "Reputation Restoration: Understanding History's Influence on State Memory"},
+      {name: 'Barbara Chestnut-Adamson', title: 'Perspectives of Hypertensive Black Males Living in Rural Virginia with Sodium Intake, Monitoring, and Reduction'},
+      {name: 'Asha Puthanveetil', title: 'One-Sided Ties, Unequal Outcomes: Race, Parasocial Relationships, and Mental Health'},
+      {name: 'John Young IV', title: 'The United States and the Chimurenga: Evolution of U.S Diplomacy Towards Rhodesia and Zimbabwe, 1965-1983'},
+      {name: 'Bharati Aluru', title: 'Decomposing Racial Disparities in Pain Management in the U.S. Healthcare System: An Exploratory Analysis'}
+    ],
     description: 'Paper presentations on race, ethnicity, and racial inequality in society.'
+  },
+  {
+    id: 's10',
+    type: 'institution',
+    badgeClass: 'badge-institution',
+    badgeLabel: 'Institution, Networks & Technology',
+    cardClass: 'type-institution',
+    title: 'Institution, Networks & Technology',
+    timeStart: '1:00',
+    timeEnd: '2:30',
+    ampm: 'PM',
+    room: 'Room 2360, Reitz Union',
+    speakers: ['Tyler Collis', 'Dairys Montes de Oca', 'Kaili Zhang', 'Chance Dyer', 'Eva Pokharel', 'Salah Esmaeiligoujar'],
+    papers: [
+      {name: 'Tyler Collis', title: 'Fact-Checking Without Identity: AI Agents and Affective Polarization'},
+      {name: 'Dairys Montes de Oca', title: 'Game-Based Training for FANO Volunteers: Safer Food and Less Waste'},
+      {name: 'Kaili Zhang', title: 'The Diffusion of Wisdom and Foolishness: A Threshold Model on Organizational Networks'},
+      {name: 'Chance Dyer', title: 'From Calling to Quitting: A Study of Intention to Quit Among Preservice Teachers'},
+      {name: 'Eva Pokharel', title: 'Ethics Without God: How Secular Societies Build Ethical Frameworks in the Absence of Religion'},
+      {name: 'Salah Esmaeiligoujar', title: "Enhancing Law Students' Critical Thinking Through AI-Supported IRAC-Based Case Learning"}
+    ],
+    description: 'Paper presentations on institutions, social networks, and technology.'
   }
 ];
 
 const TIME_BLOCKS = [
   { label: '9:00 AM', ids: ['s0'] },
-  { label: '10:15 AM – Concurrent Sessions I', ids: ['s1','s2','s3','s4'], parallel: true },
+  { label: '9:30 – 10:50 AM – Concurrent Sessions I', ids: ['s1','s2','s3','s4'], parallel: true },
   { label: '1:00 PM', ids: ['s5'] },
-  { label: '2:15 PM – Concurrent Sessions II', ids: ['s6','s7','s8','s9'], parallel: true },
+  { label: '1:00 – 2:30 PM – Concurrent Sessions II', ids: ['s6','s7','s8','s9','s10'], parallel: true },
 ];
 
-// ─── RENDER SCHEDULE ──────────────────────────────────────────────────────
 let activeFilter = 'all';
 
 function renderSchedule(filter) {
@@ -490,7 +559,6 @@ function renderSchedule(filter) {
   wrap.innerHTML = meta + html;
 }
 
-// ─── FILTER BUTTONS ───────────────────────────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -499,7 +567,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// ─── MODAL ────────────────────────────────────────────────────────────────
 function openModal(id) {
   const s = SESSIONS.find(x => x.id === id);
   if (!s) return;
@@ -520,11 +587,16 @@ function openModal(id) {
       <div><strong>About</strong>${s.description}</div>
     </div>`;
 
-  if (s.speakers.length) {
-    const label = s.type === 'keynote' ? 'Keynote Speaker' : s.type === 'workshop' ? 'Workshop Leader' : 'Presenters';
+  if (s.papers && s.papers.length) {
+    body += `<div class="modal-presenters">
+      <h4>Presenters</h4>
+      ${s.papers.map((p, i) => `<div class="modal-presenter-item"><span class="modal-presenter-num">${i+1}.</span><div><div>${p.name}</div><div class="modal-paper-title">${p.title}</div></div></div>`).join('')}
+    </div>`;
+  } else if (s.speakers.length) {
+    const label = s.type === 'keynote' ? 'Keynote Speaker' : 'Workshop Leader';
     body += `<div class="modal-presenters">
       <h4>${label}</h4>
-      ${s.speakers.map((name, i) => `<div class="modal-presenter-item"><span class="modal-presenter-num">${s.type === 'keynote' || s.type === 'workshop' ? '★' : (i+1)+'.'}</span>${name}</div>`).join('')}
+      ${s.speakers.map(name => `<div class="modal-presenter-item"><span class="modal-presenter-num">★</span>${name}</div>`).join('')}
     </div>`;
   }
 
@@ -542,14 +614,13 @@ function handleOverlayClick(e) {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
 
-// ─── NAMES VIEW ───────────────────────────────────────────────────────────
 function buildPresenterIndex() {
   const map = {};
   SESSIONS.forEach(s => {
     if (s.type === 'keynote' || s.type === 'workshop') return;
-    s.speakers.forEach(name => {
-      if (!map[name]) map[name] = [];
-      map[name].push(s);
+    (s.papers || s.speakers.map(n => ({name: n, title: ''}))).forEach(p => {
+      if (!map[p.name]) map[p.name] = [];
+      map[p.name].push({session: s, title: p.title});
     });
   });
   return map;
@@ -568,7 +639,6 @@ function renderNames(query) {
     return;
   }
 
-  // Group by first letter
   const groups = {};
   filtered.forEach(name => {
     const letter = name[0].toUpperCase();
@@ -581,11 +651,11 @@ function renderNames(query) {
     html += `<div class="name-letter-group"><div class="name-letter-heading">${letter}</div>`;
     groups[letter].forEach(name => {
       html += `<div class="name-entry"><div class="name-person">${name}</div>`;
-      map[name].forEach(s => {
+      map[name].forEach(({session: s, title}) => {
         html += `<div class="name-session-link" onclick="showSessionFromNames('${s.id}')">
           <div class="name-session-time">${s.timeStart} ${s.ampm}</div>
           <div>
-            <div class="name-session-title">${s.title}</div>
+            <div class="name-session-title">${title || s.title}</div>
             <div class="name-session-loc">${s.room}</div>
           </div>
         </div>`;
@@ -603,7 +673,6 @@ function showSessionFromNames(id) {
   setTimeout(() => openModal(id), 120);
 }
 
-// ─── NAVIGATION ───────────────────────────────────────────────────────────
 function showView(view) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -624,7 +693,6 @@ function showView(view) {
   }
 }
 
-// ─── INIT ─────────────────────────────────────────────────────────────────
 renderSchedule('all');
 </script>
 </body>
