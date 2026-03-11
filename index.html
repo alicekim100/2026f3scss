@@ -128,7 +128,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .speaker-card:last-child{border-bottom:none}
 .speaker-avatar{width:48px;height:48px;border-radius:50%;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;color:var(--gold);flex-shrink:0}
 .speaker-info strong{display:block;font-size:.92rem;color:var(--text-dark);margin-bottom:2px}
-.speaker-info span{font-size:.8rem;color:var(--text-light)}
+.speaker-info span:not(.speaker-role){font-size:.8rem;color:var(--text-light)}
 .speaker-role{display:inline-block;margin-top:5px;font-size:.68rem;padding:2px 8px;border-radius:10px;font-weight:700;color:#fff}
 /* Welcome / Cover Page */
 .welcome-view{display:none;min-height:100vh;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;text-align:center}
@@ -256,7 +256,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
         <div class="speaker-card">
           <div class="speaker-avatar">PF</div>
           <div class="speaker-info">
-            <strong>Dr. Perez-Felkner</strong>
+            <strong>Dr. Lara Perez-Felkner</strong>
             <span>Florida State University</span><br>
             <span class="speaker-role badge badge-keynote">Keynote Speaker</span>
           </div>
@@ -349,8 +349,8 @@ const SESSIONS = [
     timeEnd: '12:00',
     ampm: 'PM',
     room: 'Reitz Union Auditorium',
-    speakers: ['Dr. Perez-Felkner'],
-    description: 'Opening keynote address by Dr. Perez-Felkner. All conference attendees are invited to the Reitz Union Auditorium for this special session.'
+    speakers: ['Dr. Lara Perez-Felkner'],
+    description: 'Opening keynote address by Dr. Lara Perez-Felkner. All conference attendees are invited to the Reitz Union Auditorium for this special session.'
   },
   {
     id: 's1',
