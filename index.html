@@ -145,6 +145,13 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .welcome-enter-btn:hover{opacity:.88;transform:translateY(-1px)}
 .welcome-uf-badge{margin-top:32px;font-size:1rem;color:rgba(255,255,255,.35);letter-spacing:.06em;text-transform:uppercase}
 @media(min-width:600px){.welcome-title{font-size:2.5rem}.header-top{padding:14px 28px}.filter-row{padding:8px 28px 12px}main{padding:20px 28px}.names-view-wrap{padding:20px 28px}.info-view-wrap{padding:20px 28px}}
+.exec-officers{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.exec-item{display:grid;grid-template-columns:130px 1fr;align-items:baseline;gap:6px;font-size:.78rem;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.exec-item--advisor{margin-top:4px;padding-top:8px;border-top:1px solid rgba(0,0,0,.15);border-bottom:none}
+.exec-role{color:var(--gold);font-weight:600;font-size:.72rem;letter-spacing:.03em}
+.exec-name{color:var(--text-dark);font-weight:500}
+.exec-email{grid-column:2;font-size:.68rem;color:var(--text-light);text-decoration:none}
+.exec-email:hover{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -281,20 +288,17 @@ main{max-width:900px;margin:0 auto;padding:16px}
         </div>
       </div>
 
-      <div class="info-panel">
-        <h2>Track Legend</h2>
-        <div class="legend">
-          <div class="legend-items">
-            <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>Keynote Address</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#e07b39"></div>Workshop</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Crime &amp; Deviance</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#7b5ea7"></div>Gender &amp; Sexuality</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#2e8b8b"></div>Health &amp; Wellbeing</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Inequality &amp; Stratification</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div>Environment &amp; Conservatism</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#b45309"></div>Race &amp; Ethnicity</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#0e7490"></div>Institution, Networks &amp; Technology</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#6366f1"></div>Poster Session</div>
+      <h2 style="margin-top:28px">2025–26 Executive Officers</h2>
+        <div class="exec-officers">
+          <div class="exec-item"><span class="exec-role">President</span><span class="exec-name">Jingqin Ji</span><a class="exec-email" href="mailto:ji.ji@ufl.edu">ji.ji@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Vice President</span><span class="exec-name">Alice Kim</span><a class="exec-email" href="mailto:jooyeonkim@ufl.edu">jooyeonkim@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Secretary</span><span class="exec-name">Kaili Zhang</span><a class="exec-email" href="mailto:zhangkaili@ufl.edu">zhangkaili@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Treasurer</span><span class="exec-name">Louise Villanueva</span><a class="exec-email" href="mailto:villanueva.ls@ufl.edu">villanueva.ls@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Project Manager</span><span class="exec-name">Ryan Howard</span><a class="exec-email" href="mailto:ryanhoward@ufl.edu">ryanhoward@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Public Relations</span><span class="exec-name">Rachel Chen</span><a class="exec-email" href="mailto:rchen7@ufl.edu">rchen7@ufl.edu</a></div>
+          <div class="exec-item"><span class="exec-role">Volunteer Coord.</span><span class="exec-name">Sooyun Lee</span><a class="exec-email" href="mailto:sooyunlee@ufl.edu">sooyunlee@ufl.edu</a></div>
+          <div class="exec-item exec-item--advisor"><span class="exec-role">Faculty Advisor</span><span class="exec-name">Dr. Autumn McClellan</span><a class="exec-email" href="mailto:autumn.mcclellan@ufl.edu">autumn.mcclellan@ufl.edu</a></div>
+            </div>
           </div>
         </div>
       </div>
