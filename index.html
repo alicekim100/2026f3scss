@@ -66,17 +66,14 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .time-separator{display:flex;align-items:center;gap:10px;margin:18px 0 10px;font-size:.76rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em}
 .time-separator:before,.time-separator:after{content:"";flex:1;height:1px;background:var(--cream-dark)}
 .parallel-note{font-size:.7rem;color:var(--text-light);background:var(--cream);border:1px solid var(--cream-dark);border-radius:6px;padding:5px 12px;margin-bottom:10px;text-align:center}
-/* Bottom Nav */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--navy);border-top:1px solid rgba(201,168,76,.25);display:flex;z-index:100}
 .nav-btn{flex:1;padding:12px 8px;border:none;background:transparent;color:#ffffff70;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:500;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;text-transform:uppercase;letter-spacing:.06em;transition:color .15s}
 .nav-btn svg{width:20px;height:20px}
 .nav-btn.active{color:var(--gold)}
 .nav-btn:hover:not(.active){color:#ffffffbf}
 .content-area{padding-bottom:80px}
-/* Views */
 .view{display:none}
 .view.active{display:block}
-/* Modal */
 .modal-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:#0000008c;z-index:200;align-items:flex-end;justify-content:center}
 .modal-overlay.open{display:flex}
 .modal-sheet{background:var(--white);width:100%;max-width:640px;border-radius:18px 18px 0 0;max-height:88vh;overflow-y:auto;padding:0 0 32px;animation:slideUp .28s cubic-bezier(.32,1.2,.4,1) both}
@@ -97,7 +94,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .modal-paper-title{font-size:.78rem;color:var(--text-light);font-style:italic;margin-top:2px;line-height:1.4}
 .modal-actions{padding:0 20px;margin-top:16px;display:flex;gap:10px}
 .modal-close-btn{flex:1;padding:12px;border-radius:8px;border:none;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer}
-/* Names view */
 .names-view-wrap{max-width:900px;margin:0 auto;padding:16px}
 .names-search-wrap{background:var(--navy);padding:10px 16px 12px;position:sticky;top:0;z-index:99;margin:-16px -16px 16px}
 .names-search-input{width:100%;padding:9px 14px;border:2px solid var(--gold);border-radius:8px;background:var(--navy);color:#fff;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;appearance:none;-webkit-appearance:none}
@@ -113,7 +109,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .name-session-time{font-size:.7rem;color:var(--gold);font-weight:700;white-space:nowrap;padding-top:2px}
 .name-session-title{font-size:.8rem;color:var(--text-mid);line-height:1.4}
 .name-session-loc{font-size:.7rem;color:var(--text-light);margin-top:1px}
-/* Info view */
 .info-view-wrap{max-width:900px;margin:0 auto;padding:16px}
 .info-panel{background:var(--white);border-radius:var(--radius);padding:20px;margin-bottom:12px;box-shadow:0 2px 8px #0f1b3514}
 .info-panel h2{font-family:'DM Serif Display',serif;color:var(--navy);font-size:1.2rem;margin-bottom:10px}
@@ -136,7 +131,6 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .speaker-info strong{display:block;font-size:.92rem;color:var(--text-dark);margin-bottom:2px}
 .speaker-info span:not(.speaker-role){font-size:.8rem;color:var(--text-light)}
 .speaker-role{display:inline-block;margin-top:5px;font-size:.68rem;padding:2px 8px;border-radius:10px;font-weight:700;color:#fff}
-/* Welcome / Cover Page */
 .welcome-view{display:none;min-height:100vh;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;text-align:center}
 .welcome-view.active{display:flex}
 .welcome-logo{width:80px;height:80px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;font-weight:900;color:var(--navy);letter-spacing:-.02em;font-family:'DM Serif Display',serif}
@@ -510,7 +504,7 @@ const SESSIONS = [
       {name: 'Li, Aitong', title: 'Household Instability and Sibling Similarity in United States', affiliation: 'University of Florida'},
       {name: 'Mihaila, Christiana; Kaitlyn Dunn; Luna Cummings; Bella Rodriguez; Menalie Bailey; Zoey Fowler; Sofia Figueroa; Megan McCollum; Sophia Zitnik; Macarena Guerrero; Alejandra Torres', title: 'Impact of Chronic Exposure to Comparison-Based Social Media Content on Decision Paralysis and Identity Cohesion in Young Adults', affiliation: 'University of South Florida'},
       {name: 'Mihaila; Luna Cummings; Leila Wotruba; Rasha Ibrahim; Mymora Cooper; Shanzay Khan; Stephanie Vasquez', title: 'Structural Racism in Health Insurance Access: The Lasting Impact of Redlining on Breast Cancer Outcomes', affiliation: 'University of South Florida'},
-      {name: 'Chen, Tingjun', title: 'From Barriers to Access: Exploring Disabled Travelers\' Expectations and Concerns of Virtual Tourism as Substitute Experience', affiliation: 'University of Florida'},
+      {name: 'Chen, Tingjun', title: 'From Barriers to Access: Exploring Disabled Travelers\'  Expectations and Concerns of Virtual Tourism as Substitute Experience', affiliation: 'University of Florida'},
       {name: 'Jollif, Brooke', title: 'Hip-Hop, Crime & Family through the lens of Chromakopia by Tyler, the Creator', affiliation: 'University of Florida'},
       {name: 'Campos Gort, Melissa; Lyra Toohey; Lindsey Rodriguez', title: 'Reframing love: How cognitive reappraisal links attachment anxiety to relationship commitment', affiliation: 'University of Psychology'},
       {name: 'Cruz, Ada', title: 'An Analysis on Youth Recidivism with Unsupervised and Supervised Learning Methods', affiliation: 'University of Florida'},
@@ -667,7 +661,9 @@ function renderSchedule(filter) {
 
     if (!visibleSessions.length) return;
 
-    visibleCount += visibleSessions.filter(s => s.type !== 'keynote' && s.type !== 'workshop').length;
+    visibleCount += activeFilter === 'all'
+      ? visibleSessions.filter(s => s.type !== 'keynote' && s.type !== 'workshop').length
+      : visibleSessions.length;
     html += `<div class="time-separator">${block.label}</div>`;
     if (block.parallel && visibleSessions.length > 1) {
       html += `<div class="parallel-note">Parallel sessions — choose your track</div>`;
