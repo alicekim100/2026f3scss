@@ -631,7 +631,6 @@ function renderSchedule(filter) {
       html += `<div class="special-event-card${block.isBreak ? ' break-card' : ''}">
         <div class="special-event-label">${block.note}</div>
       </div>`;
-      visibleCount++;
       return;
     }
     const visibleSessions = block.ids
