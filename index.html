@@ -734,10 +734,12 @@ function handleOverlayClick(e) {
 function buildPresenterIndex() {
   const map = {};
   SESSIONS.forEach(s => {
-    if (s.type === 'keynote' || s.type === 'workshop' || s.type === 'poster') return;
+    if (s.type === 'keynote' || s.type === 'workshop') return;
     (s.papers || s.speakers.map(n => ({name: n, title: ''}))).forEach(p => {
-      if (!map[p.name]) map[p.name] = [];
-      map[p.name].push({session: s, title: p.title});
+      // 포스터는 "Last, First; Co-author; ..." 형식이므로 첫 번째 저자만 추출
+      const displayName = s.type === 'poster' ? p.name.split(';')[0].trim() : p.name;
+      if (!map[displayName]) map[displayName] = [];
+      map[displayName].push({session: s, title: p.title});
     });
   });
   return map;
