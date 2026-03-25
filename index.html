@@ -637,7 +637,7 @@ function renderSchedule(filter) {
       .map(id => SESSIONS.find(s => s.id === id))
       .filter(s => activeFilter === 'all' || s.type === activeFilter);
     if (!visibleSessions.length) return;
-    visibleCount += visibleSessions.length;
+    visibleCount += visibleSessions.filter(s => s.type !== 'keynote' && s.type !== 'workshop').length;
     html += `<div class="time-separator">${block.label}</div>`;
     if (block.parallel && visibleSessions.length > 1) {
       html += `<div class="parallel-note">Parallel sessions — choose your track</div>`;
