@@ -750,12 +750,21 @@ function openModal(id) {
       ${s.papers.map((p, i) => `<div class="modal-presenter-item"><span class="modal-presenter-num">${i+1}.</span><div><div>${p.name}</div><div class="modal-paper-title">${p.title}</div>${p.affiliation ? `<div style="font-size:.72rem;color:var(--text-light);margin-top:1px">${p.affiliation}</div>` : ''}</div></div>`).join('')}
     </div>`;
   } else if (s.speakers.length) {
-    const label = s.type === 'keynote' ? 'Keynote Speaker' : 'Workshop Leader';
-    body += `<div class="modal-presenters">
-      <h4>${label}</h4>
-      ${s.speakers.map(name => `<div class="modal-presenter-item"><span class="modal-presenter-num">★</span>${name}</div>`).join('')}
-    </div>`;
+  let label = 'Speakers';
+
+  if (s.type === 'keynote') {
+    label = 'Keynote Speaker';
+  } else if (s.type === 'workshop') {
+    label = 'Workshop Leader';
+  } else if (s.type === 'welcome') {
+    label = 'Official Welcome';
   }
+
+  body += `<div class="modal-presenters">
+    <h4>${label}</h4>
+    ${s.speakers.map(name => `<div class="modal-presenter-item"><span class="modal-presenter-num">★</span>${name}</div>`).join('')}
+  </div>`;
+}
 
   document.getElementById('modalBody').innerHTML = body;
   document.getElementById('modalOverlay').classList.add('open');
