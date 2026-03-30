@@ -331,6 +331,14 @@ main{max-width:900px;margin:0 auto;padding:16px}
   <button class="nav-btn" id="navNames" onclick="showView('names')">
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
     Presenters
+   <button class="nav-btn" id="navMap" onclick="openMapPage()">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
+      <line x1="9" y1="3" x2="9" y2="18"/>
+      <line x1="15" y1="6" x2="15" y2="21"/>
+    </svg>
+    Map
+  </button>
   </button>
   <button class="nav-btn" id="navInfo" onclick="showView('info')">
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -790,6 +798,17 @@ function handleOverlayClick(e) {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
 
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+function openMapPage() {
+  window.open(
+    'https://app.mappedin.com/map/67bdc505679a9d000bfacd1d?accessible=true&floor=m_8d26ad16e5b79194',
+    '_blank'
+  );
+}  
+  
 // ─── NAMES VIEW ───────────────────────────────────────────────────────────
 function buildPresenterIndex() {
   const map = {};
