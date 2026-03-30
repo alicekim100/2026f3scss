@@ -26,6 +26,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .results-count strong{color:var(--text-dark)}
 .session-card{background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:0 2px 8px #0f1b3514;overflow:hidden;transition:box-shadow .2s,transform .15s;border-left:4px solid var(--navy-light);cursor:pointer}
 .session-card:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
+.session-card.type-welcome[border-left-color:var(--black)]
 .session-card.type-keynote{border-left-color:var(--gold)}
 .session-card.type-workshop{border-left-color:#e07b39}
 .session-card.type-crime{border-left-color:var(--red)}
@@ -43,6 +44,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .card-title{font-family:'DM Serif Display',serif;font-size:.98rem;line-height:1.35;color:var(--navy);margin-bottom:5px}
 .card-meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:4px}
 .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.67rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.badge-welcome{background:var(--black);color:#fff}
 .badge-keynote{background:var(--gold);color:#fff}
 .badge-workshop{background:#e07b39;color:#fff}
 .badge-crime{background:var(--red);color:#fff}
@@ -339,10 +341,17 @@ main{max-width:900px;margin:0 auto;padding:16px}
 <script>
 // ─── DATA ───────────────────────────────────────────────────────────────────
 const SESSIONS = [
+  {id:'s00',
+   type: 'welcome'
+   badgeClass: 'badge-welcome',
+   badgeLabel: 'Welcome',
+   cardClass: 'type-welcome'
+   title: 'Official Welcome'
+  },
   {
     id: 's0',
     type: 'keynote',
-    badgeClass: 'badge-keynote',
+    badgeCl.bass: 'badge-keynote',
     badgeLabel: 'Keynote',
     cardClass: 'type-keynote',
     title: 'Keynote Address',
