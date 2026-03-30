@@ -26,7 +26,7 @@ main{max-width:900px;margin:0 auto;padding:16px}
 .results-count strong{color:var(--text-dark)}
 .session-card{background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:0 2px 8px #0f1b3514;overflow:hidden;transition:box-shadow .2s,transform .15s;border-left:4px solid var(--navy-light);cursor:pointer}
 .session-card:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
-.session-card.type-welcome[border-left-color:var(--black)]
+.session-card.type-welcome{border-left-color:var(--black)}
 .session-card.type-keynote{border-left-color:var(--gold)}
 .session-card.type-workshop{border-left-color:#e07b39}
 .session-card.type-crime{border-left-color:var(--red)}
@@ -351,7 +351,7 @@ const SESSIONS = [
   {
     id: 's0',
     type: 'keynote',
-    badgeCl.bass: 'badge-keynote',
+    badgeClass: 'badge-keynote',
     badgeLabel: 'Keynote',
     cardClass: 'type-keynote',
     title: 'Keynote Address',
